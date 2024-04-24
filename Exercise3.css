@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+.box-container{
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display:grid;
+    grid-template-rows: repeat(3,100px);
+    grid-template-columns: repeat(3,500px);
+    gap: 20px;
+}
+.box{
+    border-radius: 10px;
+    font-size: 30px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    place-content: center;
+}
+.box-color{
+    background-color: rgb(12, 12, 150);
+}
+.box-change{
+    background-color: rgb(66, 89, 202);
+}
+.box4{
+    grid-column: span 2;
+}
+.box7{
+    grid-column:  span 2;
+}
+/* Medai repornsive */
+/* laptop */
+@media (max-width: 1399.98px) {
+
+}
+/* ipad pro */
+@media (max-width: 1199.98px) {
+    .box4 {
+        grid-column: span 2;
+        background-color: green;
+    }
+    .box1 .box2 .box3 .box4 .box5 .box6 {
+        width: 40px;
+        grid-column: span 3;
+        background-color: yellow;
+    }
+}
+/* ipad */
+@media (max-width: 991.98px) {
+    .container {
+        grid-template-rows: repeat(5, 50px);
+        grid-template-columns: repeat(2, 400px);
+    }
+    .box-color {
+        background-color: rgb(28 195 139);
+    }
+
+}
+/* Mobile phone */
+@media (max-width: 767.98px) {
+    .container {
+        grid-template-rows: repeat(3, 50px);
+        grid-template-columns: repeat(3, 100px);
+    }
+    .container {
+        gap: 10px;
+    }
+
+}
+/* Mobile phone */
+@media (max-width: 575.98px) {
+    .container {
+        grid-template-rows: repeat(3, 50px);
+        grid-template-columns: repeat(3, 100px);
+    }
+    .container {
+        gap: 10px;
+    }
+
+}
